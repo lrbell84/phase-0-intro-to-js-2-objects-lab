@@ -1,6 +1,6 @@
 let employee = {
     streetAddress: "",
-    name: ""
+    name: "Sam"
 }
 
 function updateEmployeeWithKeyAndValue(employee, key, value) {
@@ -18,8 +18,9 @@ function deleteFromEmployeeByKey(employee, key) {
     return newObject
 }
 
-function destructivelyDeleteFromEmployeeByKey(employee) {
-    return employee.name
+function destructivelyDeleteFromEmployeeByKey(employee, key) {
+    delete employee[key];
+    return employee;
 }
 
 
